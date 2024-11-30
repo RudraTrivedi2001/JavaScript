@@ -1,3 +1,6 @@
+// Apna college Questions 
+
+//Usename
 let userFullName = prompt("Type your full name without spaces")
 userFullName = userFullName.toLocaleLowerCase();
 

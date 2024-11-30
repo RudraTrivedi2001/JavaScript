@@ -1,65 +1,60 @@
-let marks = [88,99,44,55,67]
+/* Array Basics */
+let marks = [88, 99, 44, 55, 67]; // Declaring an array 'marks' with 5 elements.
+console.log(marks); // Prints the 'marks' array to the console.
+console.log(marks.length); // Prints the length of the array (number of elements) to the console.
 
-console.log(marks) 
+let hero = ["salman", "sahruk", "amir"]; // Declaring an array 'hero' with names of actors.
+console.log(hero); // Prints the 'hero' array to the console.
+console.log(hero.length); // Prints the length of the 'hero' array.
+console.log(typeof marks); // Prints 'object' because in JavaScript, arrays are a type of object.
+console.log(typeof hero); // Prints 'object' because arrays are also objects in JavaScript.
 
-console.log(marks.length) 
-
-let hero = ["salman " , "sahruk", "amir" ]
-console.log(hero)
-console.log(hero.length)  
-console.log(typeof marks) // in  js araay is a type of object
-console.log(typeof hero) 
-
-
-
-  for(let value of marks){   //for-of loop for iteration over arrays and strings
-    console.log(value) 
-  }
-
-marks[2] = 66;   //arrays are mutable
-console.log(marks[2])
-
-
-console.log(marks[5])  // will give undefined as there is no value in that posoition 
-
-
-for(let i  = 0; i<hero.length ; i++){
-    console.log(hero[i].toUpperCase());
+/* Iterating Over Arrays with for-of Loop */
+for (let value of marks) {   // Iterating over each element of the 'marks' array.
+    console.log(value); // Prints each value in the 'marks' array one by one.
 }
 
+/* Modifying Array Elements */
+marks[2] = 66; // Changing the value at index 2 (from 44 to 66).
+console.log(marks[2]); // Prints the updated value at index 2, which is 66.
 
-hero.push("saktiman") // push add in end of the original array
-console.log(hero);
+console.log(marks[5]);  // Prints undefined because there is no element at index 5 (out of bounds of the array).
 
-let deletedValue = hero.pop(); //deletes the last value of the array and returns the value 
-console.log(deletedValue);
-console.log(hero);
+/* Iterating Using for Loop */
+for (let i = 0; i < hero.length; i++) {
+    console.log(hero[i].toUpperCase()); // Converts each name in 'hero' array to uppercase and prints it.
+}
 
+/* Adding and Removing Elements in Arrays */
+hero.push("saktiman"); // Adds "saktiman" at the end of the 'hero' array.
+console.log(hero); // Prints the updated 'hero' array.
 
-console.log(hero);
-console.log(hero.toString()); // makes a string of the array but dosent change the original array
-console.log(hero)
+let deletedValue = hero.pop(); // Removes the last element from the 'hero' array and stores it in 'deletedValue'.
+console.log(deletedValue); // Prints the deleted element ('saktiman').
+console.log(hero); // Prints the 'hero' array after removal of the last element.
 
-let indianhero = ["Bahubali" , "hanuman", "me", "You"]
+/* Array Methods */
+console.log(hero); 
+console.log(hero.toString()); // Converts the 'hero' array into a string, but does not modify the original array.
+console.log(hero); // Prints the 'hero' array after calling toString() (remains unchanged).
 
-let newAarray = marks.concat(hero,indianhero);
-console.log(newAarray);   //concats two arrays and forms a new array but dosent affect the original arrays
+let indianhero = ["Bahubali", "hanuman", "me", "You"]; // Declaring a new array 'indianhero'.
+let newArray = marks.concat(hero, indianhero); // Combines 'marks', 'hero', and 'indianhero' into a new array 'newArray'.
+console.log(newArray); // Prints the concatenated array 'newArray'.
 
+/* Adding and Removing from the Start of Arrays */
+marks.unshift(55); // Adds 55 at the beginning of the 'marks' array.
+console.log(marks); // Prints the updated 'marks' array.
 
-marks.unshift(55)//adds element to the start
-console.log(marks)
+console.log(marks.shift()); // Removes and returns the first element of the 'marks' array (55).
+console.log(marks); // Prints the 'marks' array after removing the first element.
 
+/* Slicing Arrays (Extracting Subarrays) */
+console.log(indianhero.slice(0, 2)); // Extracts elements from index 0 to 2 (excluding 2) and prints ['Bahubali', 'hanuman'].
+console.log(indianhero); // Prints the original 'indianhero' array (unchanged).
 
-console.log(marks.shift()); // delets from start and returns
-console.log(marks)
-
-
-console.log(indianhero.slice(0, 2)); //returns a peice of the array. dosent change the original array
-console.log(indianhero);
-
- //splice 
-
- // Initial array
+/* Splice - Modifying Arrays by Removing and Inserting Elements */
+// Initial array
 let arr = [1, 2, 3, 4, 6, 7, 8, 9, 5, 4, 3, 33];
 console.log(arr); // Outputs: [1, 2, 3, 4, 6, 7, 8, 9, 5, 4, 3, 33]
 
