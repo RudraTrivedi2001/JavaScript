@@ -31,8 +31,8 @@ This repository contains JavaScript programs that cover fundamental concepts and
 - **loop.js**: Various loop structures and practical examples.
   
 ### Additional Files:
-- **HTML files**: For practicing DOM manipulation, such as `arrays.html`, `operators.html`, `string.html`, etc.
-- **CSS**: Basic styling for DOM exercises (e.g., `dom.css`).
+- **HTML files (in the Basics folder)**: The HTML files in the **Basics** folder (such as `arrays.html`, `operators.html`, `string.html`, etc.) are just basic boilerplate files. These HTML files do not contain any logic except linking the relevant JavaScript files. Since this repository is focused on JavaScript, I have intentionally skipped adding detailed HTML code for the basic examples. However, these HTML files are included for structure and can be used to link the JavaScript files to test the code.
+- **DOM and Callback Files**: For DOM manipulation and callback functions, there are proper HTML and CSS files along with the JavaScript files. In these cases, I've added extra code in the HTML files to demonstrate how JavaScript interacts with the DOM, providing a more complete experience with HTML, CSS, and JS working together.
 
 ## How to Use This Repository
 
