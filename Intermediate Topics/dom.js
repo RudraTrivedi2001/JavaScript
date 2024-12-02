@@ -23,7 +23,6 @@ window.console.log("hello2"); // Another way to log to the console. Here 'window
 // It represents the structure of the HTML page as a tree of nodes. 
 // Through the DOM, we can access, modify, and manipulate the content and structure of the webpage.
 
-// Printing out properties and methods of the 'document' object, which represents the entire HTML document.
 console.dir(document); // Shows all properties and methods of the 'document' object in a structured view.
 
 // Q: What does window.document refer to?
@@ -45,3 +44,34 @@ console.log(document.head); // Logs the head element of the HTML document (every
 // Q: Why do we write the script tag just before the ending of the body tag?
 // We write the <script> tag just before the closing </body> tag to ensure the HTML content is fully loaded before the JavaScript runs.
 // This ensures that any elements (like buttons or divs) that JavaScript might need to interact with are available and not undefined.
+
+
+// Selecting with ID
+let byId = document.getElementById("heading"); // Selects the element with id="heading"
+console.log(byId); // Logs the element to the console
+console.dir(byId); // Logs a structured view of the element's properties and methods
+
+// Selecting by class name
+let byClass = document.getElementsByClassName("HEADING-CLASS"); // Selects elements with class="HEADING-CLASS" (returns an HTMLCollection)
+console.dir(byClass); // Logs the HTMLCollection to the console
+console.log(byClass); // Logs the HTMLCollection to the console (like an array-like object)
+
+// Selecting by tag name
+let byTag = document.getElementsByTagName("p"); // Selects all <p> elements (returns an HTMLCollection)
+console.dir(byTag); // Logs the HTMLCollection to the console
+console.log(byTag); // Logs the HTMLCollection to the console
+
+// QuerySelector
+let element = document.querySelector("p"); // Selects the first <p> element found (returns the first matching element)
+let elements = document.querySelectorAll("p"); // Selects all <p> elements (returns a NodeList)
+console.dir(element); // Logs the first <p> element's properties and methods
+console.log(elements); // Logs all <p> elements as a NodeList
+
+let bynewId = document.querySelector("#heading"); // Selects the first element with id="heading"
+console.log(bynewId); // Logs the element with id="heading"
+
+let bynewClass = document.querySelectorAll(".HEADING-CLASS"); // Selects all elements with class="HEADING-CLASS"
+console.log(bynewClass); // Logs all elements with class="HEADING-CLASS"
+
+// DOM Manipulation Properties:
+

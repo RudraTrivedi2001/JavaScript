@@ -1,4 +1,4 @@
-h1 {
+#heading {
     color:  red;
     font-size: large;
 }
@@ -7,7 +7,9 @@ button {
     font-size: larger;
     background-color:  blue;
 }
-
+.HEADING-CLASS{
+    color: green;
+}
 body {
 
     background-color:  pink;
