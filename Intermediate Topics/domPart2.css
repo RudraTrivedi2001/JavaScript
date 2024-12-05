@@ -1,0 +1,16 @@
+/* Styling the div box */
+#box {
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+    text-align: center;
+    margin: 50px;
+    border: 1px solid black;
+    color: red;
+}
+
+/* Optional: Add some global styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}

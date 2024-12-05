@@ -1,0 +1,9 @@
+.box{
+  height:  100px;
+  width: 100px;
+  border:  2px solid black;
+  margin-top: 20px;
+ 
+  background-color: pink;
+  text-align: justify;
+}
