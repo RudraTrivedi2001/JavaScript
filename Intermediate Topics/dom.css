@@ -15,3 +15,9 @@ body {
     background-color:  pink;
 }
 
+#old{
+    color: red;
+    font-size: 300%;
+    visibility: hidden;
+}
+

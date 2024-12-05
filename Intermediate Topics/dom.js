@@ -75,3 +75,35 @@ console.log(bynewClass); // Logs all elements with class="HEADING-CLASS"
 
 // DOM Manipulation Properties:
 
+// Step 1: Selecting the first `div` element in the DOM
+// `querySelector("div")` is a method that returns the first `div` element found in the document.
+let div = document.querySelector("div");
+
+// Step 2: Logging the inner HTML of the `div` element
+// `innerHTML` property retrieves the entire HTML content of the selected element, including HTML tags and text content.
+console.log(div.innerHTML);  
+// For example, if the `div` contains `<p>Hello</p>`, this will log: `<p>Hello</p>`.
+
+// Step 3: Logging only the text content of the `div` element
+// `innerText` property retrieves only the visible text inside the selected element, excluding any embedded HTML tags.
+console.log(div.innerText);  
+// If the `div` contains `<p>Hello</p>`, this will log: `Hello`.
+
+// Step 4: Modifying the text content of the `div` element
+// By assigning a new string to the `innerText` property, we can dynamically change the text content of the element.
+div.innerText = "abcdefg";   
+// After this assignment, the `div` will display the text "abcdefg", and any previous content is removed.
+
+// Step 5: Modifying the HTML content of the `div` element
+// `innerHTML` allows us to update not just the text, but the complete HTML structure within the element.
+div.innerHTML = "<div>inner div</div>";  
+// This replaces the original content of the `div` with a new `div` element containing the text "inner div".
+
+// Step 6: Selecting the entire `body` element and logging its text content
+// `querySelector("body")` selects the `body` element, which contains all the visible content of the webpage.
+let bodycontents = document.querySelector("body");
+
+// Step 7: Logging the text content of the `body` element
+// `textContent` returns all the text inside the `body`, including any text that might be hidden using CSS.
+console.log(bodycontents.textContent);  
+// Even if elements are hidden with styles like `visibility: hidden`, `textContent` will include their text in the output.
