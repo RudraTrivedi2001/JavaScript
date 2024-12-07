@@ -1,0 +1,20 @@
+#btn{
+
+    color: black;
+    background-color: pink;
+    padding: 3px;
+    height: 40px;
+    width: 100px;
+    margin:  20px;
+}
+
+
+#mainDiv{
+    
+    background-color: red;
+    padding: 3px;
+    height: 400px;
+    width: 600px;
+    margin:  20px;
+
+}
