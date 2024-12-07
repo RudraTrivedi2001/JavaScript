@@ -6,33 +6,6 @@ Welcome to my **JavaScript Learning Repository**! This repository showcases my j
 
 I am learning JavaScript through the **Apna College JavaScript playlist** on YouTube, and I regularly update this repository with new programs as I progress. The playlist covers a variety of topics, and I’m continuously improving my JavaScript skills, creating new projects, and revising old ones.
 
-## Repository Contents
-
-This repository contains JavaScript programs that cover fundamental concepts and techniques. Here's an overview of the topics and files included:
-
-### Basic Topics:
-- **Arrays**: Various operations and methods related to arrays.
-- **Operators**: Understanding arithmetic, comparison, logical, and assignment operators.
-- **Strings**: String manipulation, including common string methods.
-- **Loops**: Demonstrating `for`, `while`, and `do-while` loops, along with practical examples.
-
-### Intermediate Topics:
-- **DOM (Document Object Model)**: Learning how to interact with the web page structure using JavaScript.
-- **Callback Functions**: Understanding callback functions and their importance in JavaScript.
-
-### Files and Their Purpose:
-- **First.js**: My first JS file, showcasing simple JavaScript concepts.
-- **Arrays.js**: Practice with different array operations and functions.
-- **Operators.js**: Exploring arithmetic, assignment, and logical operators.
-- **String.js**: Examples of string manipulation and string-related functions.
-- **Question.js**: Contains various coding exercises and questions for practice.
-- **DOM.js**: Basic DOM manipulations to interact with HTML elements.
-- **callbackFunctions.js**: Learning about callback functions and how they work in JavaScript.
-- **loop.js**: Various loop structures and practical examples.
-  
-### Additional Files:
-- **HTML files (in the Basics folder)**: The HTML files in the **Basics** folder (such as `arrays.html`, `operators.html`, `string.html`, etc.) are just basic boilerplate files. These HTML files do not contain any logic except linking the relevant JavaScript files. Since this repository is focused on JavaScript, I have intentionally skipped adding detailed HTML code for the basic examples. However, these HTML files are included for structure and can be used to link the JavaScript files to test the code.
-- **DOM and Callback Files**: For DOM manipulation and callback functions, there are proper HTML and CSS files along with the JavaScript files. In these cases, I've added extra code in the HTML files to demonstrate how JavaScript interacts with the DOM, providing a more complete experience with HTML, CSS, and JS working together.
 
 ## How to Use This Repository
 
