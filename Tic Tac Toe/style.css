@@ -1,55 +1,90 @@
-
-
-*{
+/* Reset default margin and padding for all elements */
+* {
     margin: 0;
     padding: 0;
 }
-h1{ margin-top: 20px;
-    color: #80ADA0;
+
+/* Style for the main heading (h1) */
+h1 {
+    margin-top: 20px; /* Adds space above the heading */
+    color: #80ADA0; /* Light green color for the text */
 }
 
-body{
-    background-color:#33202A ;
-    text-align: center;
+/* Style for the body of the webpage */
+body {
+    background-color: #33202A; /* Dark maroon background for the page */
+    text-align: center; /* Centers all text horizontally */
 }
 
-
-.container{
-    height: 70vh;
-    display: flex;
-   
-    justify-content: center;
-    align-items: center;
+/* Container to center the game board */
+.container {
+    height: 70vh; /* Occupies 70% of the viewport height */
+    display: flex; /* Enables flexible positioning of children */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
 }
 
-
-.game{
-    height: 60vmin;
-    width:  60vmin;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5vmin;
+/* Style for the game board */
+.game {
+    height: 60vmin; /* Sets the height to 60% of the smaller viewport dimension */
+    width: 60vmin; /* Sets the width to match the height (square board) */
+    display: flex; /* Enables flexible layout for boxes */
+    flex-wrap: wrap; /* Allows wrapping of boxes to the next row */
+    justify-content: center; /* Centers boxes horizontally */
+    align-items: center; /* Aligns boxes vertically */
+    gap: 1.5vmin; /* Adds space between the boxes */
 }
 
-
-.box{
-    height: 18vmin;
-    width:  18vmin;
-    border-radius: 13px;
-    border: none;
-    box-shadow: 1rem rgba(0, 0, 0,0.3 );
-    font-size: 8vmin;
-    color: #8AEA92;
-
+/* Style for individual boxes (game cells) */
+.box {
+    height: 18vmin; /* Sets the height of each box */
+    width: 18vmin; /* Sets the width of each box (square shape) */
+    border-radius: 13px; /* Rounds the corners of the box */
+    border: none; /* Removes default button border */
+    box-shadow: 1rem rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+    font-size: 8vmin; /* Sets font size for the "X" or "O" */
+    color: #8AEA92; /* Light green color for the text */
+    background-color: #ffffc7; /* Pale yellow background for the box */
 }
-#reset{
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color:#000000 ;
-    color: #80ADA0;
-    border-radius: 1rem;
-    border: none;
 
+/* Style for the message text */
+#msg {
+    font-size: 8vmin; /* Large font size for clear visibility */
+    color: #ececec; /* Light gray color for the text */
+    text-align: center; /* Centers the text */
+}
+
+/* Container for the winner/draw message */
+.msg-container {
+    height: 100vmin; /* Takes up the entire viewport height */
+    display: flex; /* Enables flexible layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    flex-direction: column; /* Stacks content vertically */
+    gap: 4rem; /* Adds space between elements inside the container */
+}
+
+/* Class to hide elements */
+.hide {
+    display: none; /* Makes the element invisible */
+}
+
+/* Style for the "New Game" button */
+#new-game-btn {
+    padding: 1rem; /* Adds space inside the button */
+    font-size: 1.25rem; /* Medium font size for button text */
+    background-color: #000000; /* Black background */
+    color: #80ADA0; /* Light green text */
+    border-radius: 1rem; /* Rounds the button edges */
+    border: none; /* Removes default border */
+}
+
+/* Style for the "Reset" button */
+#reset {
+    padding: 1rem; /* Adds space inside the button */
+    font-size: 1.25rem; /* Medium font size for button text */
+    background-color: #000000; /* Black background */
+    color: #80ADA0; /* Light green text */
+    border-radius: 1rem; /* Rounds the button edges */
+    border: none; /* Removes default border */
 }
