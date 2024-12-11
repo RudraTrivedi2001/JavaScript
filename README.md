@@ -6,6 +6,7 @@ Welcome to my **JavaScript Learning Repository**! This repository showcases my j
 
 I am learning JavaScript through the **Apna College JavaScript playlist** on YouTube, and I regularly update this repository with new programs as I progress. The playlist covers a variety of topics, and I’m continuously improving my JavaScript skills, creating new projects, and revising old ones.
 
+I also post some JavaScript mini-projects, such as **Tic-Tac-Toe**, to showcase my skills and demonstrate how the concepts I’ve learned can be applied to build interactive applications. These projects are an exciting way to solidify my knowledge and explore JavaScript in real-world scenarios.
 
 ## How to Use This Repository
 
