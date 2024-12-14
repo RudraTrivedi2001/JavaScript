@@ -1,9 +1,4 @@
-// ---------- CALLBACK HELL ----------
-
-// Callback Hell refers to deeply nested callbacks that are used to handle asynchronous tasks sequentially.
-// The issue arises when multiple tasks depend on the result of previous tasks, leading to code that's hard to read, debug, and maintain.
-
-// Another name for Callback Hell is "Pyramid of Doom" because of the triangular, deeply-indented structure of nested code.
+// ---------- CALLBACK HELL EXAMPLE 1 ----------
 
 // Function to simulate asynchronous data fetching
 function getData(dataId, getDataNext) {
@@ -11,41 +6,66 @@ function getData(dataId, getDataNext) {
         console.log("DATA = ", dataId); // Logs the current dataId to the console.
 
         // Check if the `getDataNext` callback function is provided.
-        if (getDataNext) { 
+        if (getDataNext) {
             // If `getDataNext` exists, execute it to trigger the next operation.
-            // Without this condition, the code will throw an error if `getDataNext` is undefined or null.
             getDataNext();
         }
     }, 2000); // Simulates a delay of 2 seconds before logging data.
 }
 
-// Explanation of the condition:
-// If we don't use `if(getDataNext)` and `getDataNext` is undefined, 
-// calling it directly will throw a "TypeError: getDataNext is not a function".
-// This happens because JavaScript tries to execute a function on an invalid value (null/undefined).
-
-// ---------- EXAMPLE OF CALLBACK HELL ----------
-
-// Here we are nesting callbacks to fetch data sequentially.
+// Fetching multiple data sequentially, leading to Callback Hell.
 getData(1, () => {
-    // First task is completed; now proceed to the next.
     getData(2, () => {
-        // Second task is completed; now proceed to the third.
         getData(3, () => {
-            // Third task is completed; now proceed to the fourth.
-            getData(4); // No callback is provided here, so no further nesting occurs.
+            getData(4, () => {
+                console.log("All data fetched!");
+            });
         });
     });
 });
 
-// ---------- WHY THIS STRUCTURE IS A PROBLEM ----------
-// 1. Poor readability: The code becomes harder to understand as it grows deeper.
-// 2. Debugging issues: Identifying where an error occurs is challenging in deeply nested callbacks.
-// 3. Maintenance challenges: Adding or modifying tasks increases complexity and risk of errors.
-// 4. Error handling: Managing errors across multiple levels of callbacks is cumbersome.
+// ---------- CALLBACK HELL EXAMPLE 2 ----------
 
-// ---------- COMMON MISTAKE ----------
-// Writing `getData(1, getData(2));`
-// This is incorrect because `getData(2)` is executed immediately, 
-// rather than being passed as a callback function.
-// Always pass the function reference without parentheses when using callbacks.
+// A more complex example involving multiple asynchronous tasks (e.g., fetching user info, posts, and comments)
+
+// Simulating asynchronous operations
+function fetchUser(userId, callback) {
+    setTimeout(() => {
+        console.log(`Fetched User with ID: ${userId}`);
+        callback();
+    }, 1000);
+}
+
+function fetchPosts(userId, callback) {
+    setTimeout(() => {
+        console.log(`Fetched Posts for User ID: ${userId}`);
+        callback();
+    }, 2000);
+}
+
+function fetchComments(postId, callback) {
+    setTimeout(() => {
+        console.log(`Fetched Comments for Post ID: ${postId}`);
+        callback();
+    }, 1500);
+}
+
+// Example of Callback Hell: Fetching user, their posts, and comments for a post
+fetchUser(1, () => {
+    fetchPosts(1, () => {
+        fetchComments(101, () => {
+            console.log("Fetched all required data!");
+        });
+    });
+});
+
+// ---------- WHY CALLBACK HELL IS A PROBLEM ----------
+// In both examples:
+// - The tasks are sequential and dependent on the previous task.
+// - As the tasks increase, the code becomes deeply nested and harder to manage.
+// - Adding new tasks or handling errors makes the code even more complicated.
+
+// ---------- HOW TO AVOID CALLBACK HELL ----------
+// Solutions to avoid Callback Hell include:
+// 1. **Promises**: Allows chaining of asynchronous tasks to flatten the code structure.
+// 2. **Async/Await**: Provides a cleaner and more synchronous-looking approach to handle asynchronous operations.
